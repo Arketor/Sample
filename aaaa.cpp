@@ -10,8 +10,12 @@ void dif(vector<int> v1, vector<int> v2,vector<int> &v3)
     int c=0;
     if(v1.size()==v2.size())
     {
-        if(v1[0]>=v2[0])
-        c=1;
+		for(i=0;i<v1.size();++i)
+        if(v1[i]>v2[i])
+		{
+			c=1;
+			break;
+		}
     }
     else
     if(v1.size()>v2.size())
@@ -201,8 +205,8 @@ void show(vector<int> &v)
 }
 int main()
 {
-	vector<int> v1={1,0,0};
-	vector<int> v2={-1,0};
+	vector<int> v1={9,9,8,7};
+	vector<int> v2={9,9,8,8};
 	vector<int> v3;
 	//sum
 	if(v1[0]>0)
